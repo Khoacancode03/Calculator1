@@ -117,10 +117,11 @@ namespace Calculator1
         //Operand
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            previousData = tbDisplay1.Text;
-            check = true;
-            operand = "+";
-            tbDisplay2.Text = Convert.ToString(Convert.ToDouble(previousData)) + "+" ;
+                previousData = tbDisplay1.Text;
+                check = true;
+                operand = "+";
+                tbDisplay2.Text = Convert.ToString(Convert.ToDouble(previousData)) + "+";
+   
 
         }
 
@@ -136,7 +137,6 @@ namespace Calculator1
         {
             previousData = tbDisplay1.Text;
             check = true;
-            operand = "-";
             tbDisplay2.Text = Convert.ToString(Convert.ToDouble(previousData)) + "-";
         }
 
@@ -228,13 +228,29 @@ namespace Calculator1
             tbDisplay1.Clear();
         }
 
+        
 
-        //Button +/-
+
+        //Button +/- and %
 
         private void button14_Click(object sender, EventArgs e)
         {
-           tbDisplay1.Text = "-" + tbDisplay1.Text ;
+            double a = Convert.ToDouble(tbDisplay1.Text);
+            if (a > 0)
+                tbDisplay1.Text = "-" + tbDisplay1.Text;
+            else
+            {   
+                tbDisplay1.Text = Convert.ToString(-a);
+
+            }
         }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            tbDisplay1.Text = Convert.ToString(Convert.ToDouble(tbDisplay1.Text) / 100);
+
+        }
+
 
 
 
