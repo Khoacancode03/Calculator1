@@ -397,7 +397,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "calculator";
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 

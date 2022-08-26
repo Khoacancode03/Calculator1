@@ -137,6 +137,7 @@ namespace Calculator1
         {
             previousData = tbDisplay1.Text;
             check = true;
+            operand = "-";
             tbDisplay2.Text = Convert.ToString(Convert.ToDouble(previousData)) + "-";
         }
 
@@ -244,6 +245,8 @@ namespace Calculator1
 
             }
         }
+
+       
 
         private void button19_Click(object sender, EventArgs e)
         {
